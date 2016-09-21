@@ -1,6 +1,6 @@
-A simple ruby based `Calculation` Parser / Interpreter.
+A simple ruby based Calculation Parser & Interpreter.
 
-Implemented as per @jamis's ["Weekly Programming Challenge #8"](http://weblog.jamisbuck.org/2016/9/17/weekly-programming-challenge-8.html)
+Implemented as per Jamis Buck's ["Weekly Programming Challenge #8"](http://weblog.jamisbuck.org/2016/9/17/weekly-programming-challenge-8.html)
 
 ```
 expression = term expr-op ;
