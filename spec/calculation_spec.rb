@@ -18,15 +18,15 @@ describe Calculation do
     expect( Calculation.solve("(4 + 2) * 8") ).to eq(48)
   end
 
-  it "((((5)+2)*2)-5)/3" do
+  it "((((5)+2)*2)-5)/3 = 3" do
     expect( Calculation.solve("((((5)+2)*2)-5)/3") ).to eq(3)
   end
 
-  it "6 * -3" do
+  it "6 * -3 = -18" do
     expect( Calculation.solve("6 * -3") ).to eq(-18)
   end
 
-  it "-(5 * 2) - 2" do
+  it "-(5 * 2) - 2 = -12" do
     expect( Calculation.solve("-(5 * 2) - 2") ).to eq(-12)
   end
 
