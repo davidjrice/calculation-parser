@@ -4,23 +4,6 @@ require 'calculation/term'
 require 'calculation/negation'
 require 'calculation/number'
 
-# expression = term expr-op ;
-# expr-op    = '+' expression
-#            | '-' expression
-#            | () ;
-#
-# term    = factor term-op ;
-# term-op = '\*' term
-#         | '/' term
-#         | () ;
-#
-# factor = integer
-#        | '(' expression ')'
-#        | '-' factor ;
-#
-# integer = '0' | '1' | '2' | '3' | '4'
-#         | '5' | '6' | '7' | '8' | '9' ;
-
 module Calculation
 
   class Parser
