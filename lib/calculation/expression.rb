@@ -3,7 +3,7 @@ module Calculation
   class Expression < Struct.new(:operator, :left, :right)
 
     def solve
-      eval("#{left.solve} #{operator} #{right.solve}")
+      left.solve.send(operator, right.solve)
     end
 
   end
