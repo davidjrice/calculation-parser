@@ -55,24 +55,17 @@ module Calculation
       start = scanner.pos
       negation = scanner.scan(/-/i)
       if scanner.skip(/\(/)
-        if negation
-          Negation.new(parse_expression(scanner)).tap do
-            scanner.scan(/\)/) or
-            raise "expression not terminated (start at #{start})"
-          end
-        else
-          parse_expression(scanner).tap do
-            scanner.scan(/\)/) or
-            raise "expression not terminated (start at #{start})"
-          end
+        value = parse_expression(scanner).tap do
+          scanner.scan(/\)/) or
+          raise "expression not terminated (start at #{start})"
         end
       else
-        value = scanner.scan(/\d+/).to_i
-        if negation
-          Negation.new(Number.new(value))
-        else
-          Number.new(value)
-        end
+        value = Number.new(scanner.scan(/\d+/).to_i)
+      end
+      if negation
+        Negation.new(value)
+      else
+        value
       end
     end
 
